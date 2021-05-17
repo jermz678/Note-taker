@@ -25,7 +25,7 @@ router.delete('/notes/:id', (req, res) => {
     const deletedID = notes.find(notes => notes.id === id);
     if (deletedID){
         notes = notes.filter(notes => notes.id != id);
-        res.redirect('/notes')
+        res.end();
         res.status(200);
         
     }else{
